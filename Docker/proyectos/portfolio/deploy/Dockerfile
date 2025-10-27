@@ -9,5 +9,11 @@ RUN useradd -rm -d /home/morgado -s /bin/bash morgado
 # para crear el password usamos el comando chpasswd
 RUN echo "morgado:1234" | chpasswd
 
+#establece el directorio de trabajo dentro del contenedor Apache
+WORKDIR /var/www/html
+#copiamos el contenido del directorio src (relativo al contexto de docker) al directorio de trabajo del contenedor
+COPY ./src .
+#activamos el puerto 80 de apache
 EXPOSE 80
+#ejecutamos apache en primer plano cuando se inicie el contenedor
 CMD apachectl -DFOREGROUND
