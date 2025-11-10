@@ -1,0 +1,6 @@
+services:
+  base:
+    build:
+      #ruta a través de la cual desde cualquier proyecto
+      #se tiene aceeso a cualquier imagen (DFile), recurso
+      context: 
