@@ -1,4 +1,6 @@
 FROM ubuntu 
+ARG USUARIO
+ENV USUARIO=${USUARIO}}
 RUN apt update && apt install -yq --no-install-recommends \
      apache2 \
      curl \

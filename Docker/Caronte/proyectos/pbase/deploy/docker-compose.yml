@@ -5,4 +5,8 @@ services:
       #se tiene aceeso a cualquier imagen (DFile), recurso
       context: /home/morgado/devops/DespAW/Docker/Caronte
       dockerfile: ./dockerfiles/base/ubuntu/Dockerfile
+      args:
+        - USUARIO=${USUARIO}
     container_name: ctbaseDAW
+    environment:
+      - USUARIO="pepe"

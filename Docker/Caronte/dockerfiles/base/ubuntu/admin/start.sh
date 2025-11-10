@@ -1,9 +1,9 @@
 #!/bin/bash
-
+set -e
 newUser(){
-    useradd -rm -d /home/morgado -s /bin/bash morgado
-    echo "morgado:1234" | chpasswd
-    echo "Bienvenido Morgado ... " > /home/morgado/bienvenida.txt
+    useradd -rm -d /home/${USUARIO} -s /bin/bash ${USUARIO}
+    echo "${USUARIO}:1234" | chpasswd
+    echo "Bienvenido ${USUARIO} ... " > /home/${USUARIO}/bienvenida.txt
 }
 
 main(){
