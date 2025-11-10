@@ -3,4 +3,6 @@ services:
     build:
       #ruta a través de la cual desde cualquier proyecto
       #se tiene aceeso a cualquier imagen (DFile), recurso
-      context: 
+      context: /home/morgado/devops/DespAW/Docker/Caronte
+      dockerfile: ./dockerfiles/base/ubuntu/Dockerfile
+    container_name: ctbaseDAW
